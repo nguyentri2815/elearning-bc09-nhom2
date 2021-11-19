@@ -195,13 +195,13 @@ function AdminElearing(props) {
               </Col>
               <Col className="my-2">
                 <Link to={`${url}/cancel-honors`} className="d-block h-100">
-                  <Card className="bg-success text-white h-100">
+                  <Card className="bg-info text-white h-100">
                     <Card.Body className="d-flex flex-column">
                       <Card.Title className="flex-grow-1 py-4 px-3">
                         Hủy ghi danh
                       </Card.Title>
                       <Button
-                        variant="success"
+                        variant="info"
                         className="w-100 d-flex align-items-center justify-content-between"
                       >
                         <span className="text-nowrap">xem danh sách</span>
