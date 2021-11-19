@@ -1,0 +1,290 @@
+.header {
+  transition: all 1s;
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  transition: all 0.2s linear;
+  box-shadow: 0 0 10px 0 #0000005e;
+  .scroll-false {
+    background-color: #5d626942;
+  }
+  .scroll-true {
+    background-color: #b8dfd8;
+    // opacity: 0.9;
+    // z-index: -2;
+  }
+  .header-wrapper {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      .menu {
+        margin-right: 10px;
+      }
+      .title {
+        width: 250px;
+        display: flex;
+        img {
+          width: 50px;
+          margin-right: 5px;
+        }
+        h1 {
+          align-self: flex-end;
+          margin: 0;
+          @include text($color-se-2, $fs-lg, $fw-bold-1);
+          font-family: "Grenze", serif;
+        }
+      }
+    }
+
+    // display
+    .menu,
+    .close {
+      cursor: pointer;
+      color: $color-pr-1;
+      font-size: $fs-md-lg;
+      display: none;
+    }
+    //nav
+    .header .nav {
+      display: flex;
+    }
+    .navLink {
+      padding: 0 30px;
+      color: $color-w;
+      font-weight: $fw-bold-1;
+      font-size: $fs-md-lg;
+      text-decoration: none;
+      transition: linear 0.2s;
+      &:hover {
+        color: $color-pr-3;
+      }
+    }
+    .active {
+      font-weight: 700;
+      color: $color-pr-2;
+    }
+  }
+
+  .nav ul li {
+    list-style: none;
+    display: inline-block;
+  }
+  .nav-cart {
+    z-index: 2;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    .shopingIcon {
+      @include text($color-re-1, $fs-md-lg-2, $fw-bold-1);
+    }
+    span {
+      position: absolute;
+      top: -5px;
+      right: -7px;
+      background: $color-se-1;
+      font-size: 10px;
+      color: white;
+      padding: 3px 5px;
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+  //User
+  .user {
+    margin-left: 20px;
+    width: fit-content;
+    color: $color-w;
+    .menu-user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .drop-down {
+        position: relative;
+        .fa-sort-down {
+          font-size: 16px;
+          line-height: 25px;
+        }
+        .icon-down {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #484a4d;
+
+          &-active {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: $color-se-3;
+          }
+        }
+
+        .menu-close {
+          display: none;
+        }
+        .menu-open {
+          display: inline-block;
+          position: absolute;
+          top: 30px;
+          right: 0;
+          width: 200px;
+          color: $color-pr-1;
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          overflow: hidden;
+          flex-direction: column;
+          background: $color-w100;
+          z-index: 99;
+          // transition: 0.5s linear;
+        }
+        .header-drop-down-icon {
+          cursor: pointer;
+          transition: 0.3s linear;
+          padding: 5px 10px;
+          &:hover {
+            background-color: $color-se-3;
+          }
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          box-sizing: border-box;
+          margin-bottom: 5px;
+
+          i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #bed7fce0;
+          }
+          .p-30 {
+            padding-left: 20px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .login {
+      .bttn {
+        color: white;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .header-wrapper {
+      .nav {
+        ul {
+          padding: inherit;
+        }
+        .navLink {
+          padding: 0 30px;
+          // color: $color-w;
+          // font-weight: $fw-bold-2;
+          font-size: $fs-md + 2;
+
+          &:hover {
+            color: $color-pr-3;
+          }
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+
+        right: 20px;
+      }
+      .toggle {
+        left: 0 !important;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .header-wrapper {
+      .menu,
+      .close {
+        display: block;
+      }
+      .nav {
+        ul {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          width: 50%;
+          height: 100vh;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          flex-direction: column;
+          background: $color-w100;
+          z-index: 99;
+          opacity: 0.97;
+          transition: 0.5s linear;
+        }
+        .navLink {
+          // padding: 0 30px;
+          color: $color-se-3;
+          font-weight: $fw-bold-2;
+
+          &:hover {
+            color: $color-se-4;
+          }
+        }
+        .active {
+          color: $color-pr-2;
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+
+        right: 20px;
+      }
+      .toggle {
+        left: 0 !important;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 576px) {
+    .header-wrapper {
+      min-height: 50px;
+      .logo {
+        .menu {
+          margin-right: 10px;
+        }
+        .title {
+          width: 150px;
+          display: flex;
+          img {
+            width: 30px;
+            margin-right: 0;
+          }
+          h1 {
+            @include text($color-se-2, $fs-lg - 10, $fw-bold-1);
+          }
+        }
+      }
+    }
+  }
+}

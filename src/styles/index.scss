@@ -1,0 +1,31 @@
+@import "./helpers/mixin";
+@import "./helpers/variables";
+@import "./common/button";
+//Component
+@import "./component/footer/footer.scss";
+@import "./component/header/index.scss";
+@import "./component/category/category.scss";
+@import "./component/Course/banner/banner.scss";
+@import "./component/Course/courseItem.scss";
+@import "./component/header/index.scss";
+@import "./component/SliderCourse/sliderCourse.scss";
+@import "./component/ItemCourse/itemCourse.scss";
+@import "./component/PageNotFound/PageNotFound.scss";
+@import "./component/KhoaHoc/khoahoc.scss";
+
+//View
+@import "./View/signin/sigin.scss";
+@import "./View/Home/Intro/intro.scss";
+@import "./View/Home/InfoElearning/infoElearning.scss";
+@import "./View/Home/StepBuyCourse/stepBuyCourse.scss";
+@import "./View/Home/Feel/feel.scss";
+@import "./View/Home/Category/categoty.scss";
+@import "./View/Home/CaurseHome/caursesAll.scss";
+@import "./View/Home/ListCourse/ListCourse.scss";
+@import "./View/Home/CaurseHome/CaurseCAT.scss";
+@import "./View/Detail/detail.scss";
+@import "./View/Cart/cart.scss";
+@import "./View/Profile/UserProfile/userProfile.scss";
+@import "./View/Profile/CourseProfile/courseProfile.scss";
+@import "./View/Profile/index.scss";
+@import "./View/Cart/BillCart/billCart.scss";

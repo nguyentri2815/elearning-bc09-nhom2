@@ -1,0 +1,25 @@
+.navbar-expand .navbar-nav .dropdown-menu{
+    min-width: 250px;
+}
+.dropdown-menu[data-bs-popper]{
+    left: initial;
+    right: 0;
+}
+.dropdown-toggle{
+    height: 100%;
+}
+input[disabled]{
+    opacity: 0.3;
+    &:hover{
+        border-color: none;
+        cursor: not-allowed;
+    }
+}
+.valid-feedback.d-block{
+    color: #dc3545;
+}
+.ant-message{
+    z-index: 99999999999;
+    opacity: 1;
+    display: block;
+}

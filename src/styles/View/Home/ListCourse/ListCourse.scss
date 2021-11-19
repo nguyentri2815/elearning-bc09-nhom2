@@ -1,0 +1,105 @@
+.list-course {
+  text-align: center;
+  padding: 40px 0;
+  width: 100%;
+  .subtitle {
+    @include text(rgb(53, 53, 53), $fs-md, $fw-normal);
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 10px !important;
+  }
+  .title {
+    font-family: $font-title;
+    font-size: $fs-lg;
+    font-weight: $fw-normal;
+    &::before,
+    &::after {
+      display: inline-block;
+      vertical-align: middle;
+      height: 1px;
+      width: 30%;
+      margin-right: 15px;
+      content: "";
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent);
+    }
+    &::after {
+      margin-left: 15px;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
+    }
+  }
+  .item-course {
+    box-sizing: border-box;
+    // width: 31%;
+  }
+  .lc-main-content {
+    transition: linear 0.5s;
+    .lc-content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 20px;
+      row-gap: 30px;
+      margin: 25px 0;
+      justify-content: center;
+      align-items: center;
+    }
+    .lc-btn-group {
+      text-align: center;
+      transition: linear 0.3s;
+      .btnn {
+        font-size: $fs-md + 3;
+        margin: 0 5px;
+        font-family: $font-title;
+        font-weight: $fw-bold-1;
+        display: inline-flex;
+
+        i {
+          font-weight: normal;
+          font-size: $fs-md-lg;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1256px) {
+    .title {
+      font-size: $fs-lg - 5;
+
+      &::before,
+      &::after {
+        width: 20%;
+        margin-right: 10px;
+      }
+      &::after {
+        margin-left: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .lc-main-content {
+      .lc-btn-group {
+        .btnn {
+          font-size: $fs-md - 2;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .lc-main-content {
+      .lc-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .lc-main-content {
+      .lc-content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,326 @@
+.footer {
+  background-position: center;
+  background-size: cover;
+  background-color: #e52d27;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    padding: 20px 0;
+    // overflow: hidden;
+    .main-content {
+      .title {
+        color: white;
+        font-size: 20px;
+        font-family: "Open Sans", sans-serif;
+        margin-bottom: 20px;
+        word-spacing: 3px;
+        letter-spacing: 1px;
+      }
+      .grid-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        // align-items: center;
+        justify-content: center;
+      }
+      .logo-title {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 20px;
+
+        align-items: flex-end;
+        .img-fluid {
+          width: 50px;
+          margin-right: 5px;
+        }
+        h1 {
+          display: inline;
+          margin: 0;
+          @include text($color-pr-3, $fs-lg + 5, $fw-bold-1);
+          font-family: "Grenze", serif;
+          margin-left: 5px;
+        }
+      }
+      .chinh-sach {
+        text-align: center;
+        width: 100%;
+        .list-unstyled {
+          .list-item {
+            margin-bottom: 10px;
+            .text-style {
+              text-decoration: none;
+              font-size: 14px;
+              font-weight: $fw-bold-1;
+              color: $color-pr-1;
+
+              transition: 0.2s linear;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      .lien-ket {
+        text-align: center;
+        .d-flex {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .facebook,
+          .youtube {
+            height: 50px;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            border-radius: 5px;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            transition: all 0.1s linear;
+            box-shadow: 0px 0 10px 0 rgba(0, 0, 0, 0.6);
+            &:hover {
+              box-shadow: 0px 0 10px 0 rgba(0, 0, 0, 1);
+            }
+            i {
+              transition: all 0.2s linear;
+            }
+            &:focus {
+              outline: none;
+            }
+            &.facebook {
+              background: #3c4d82;
+              margin-right: 5px;
+              &:hover {
+                background: #21346f;
+                i {
+                  transform: scale(1.2);
+                }
+              }
+            }
+            &.youtube {
+              background: #e52d27;
+              margin-left: 5px;
+              &:hover {
+                background: #e52d27;
+                i {
+                  transform: scale(1.2);
+                }
+              }
+            }
+          }
+        }
+      }
+      .lien-he {
+        text-align: center;
+        .list-unstyled {
+          text-align: left;
+          .list-item {
+            margin-bottom: 10px;
+            i {
+              font-size: 14px;
+              color: $color-pr-2;
+              span {
+                margin-left: 10px;
+                letter-spacing: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .line-mid {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, white, transparent, white);
+    position: relative;
+    margin: 10px auto 20px;
+  }
+  .second-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    .img-foorter {
+      align-items: center;
+      text-align: center;
+      a {
+        display: inline-block;
+        width: 150px;
+      }
+    }
+
+    .text-right {
+      p {
+        color: white;
+        font-size: 11px;
+        margin: 0 0 5px;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+      }
+    }
+  }
+  @media screen and (max-width: 1256px) {
+  }
+  @media screen and (max-width: 992px) {
+    .container {
+      .main-content {
+        .title {
+          font-size: 18px;
+        }
+        .grid-content {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .logo-title {
+          width: 100%;
+          margin-bottom: 20px;
+          .img-fluid {
+            width: 40px;
+            margin-right: 5px;
+            padding-bottom: 5px;
+          }
+          h1 {
+            @include text($color-pr-3, $fs-lg, $fw-bold-1);
+          }
+        }
+        .chinh-sach {
+          .list-unstyled {
+            .list-item {
+              margin-bottom: 10px;
+              .text-style {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .lien-ket {
+          .d-flex {
+            .facebook,
+            .youtube {
+              height: 40px;
+              width: 40px;
+              display: flex;
+              font-size: 23px;
+            }
+          }
+        }
+        .lien-he {
+          .list-unstyled {
+            .list-item {
+              i {
+                font-size: 12px;
+                color: $color-pr-2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 20px 0;
+      // overflow: hidden;
+      .main-content {
+        .title {
+          color: white;
+          font-size: 25px;
+        }
+        .grid-content {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          column-gap: 20px;
+          row-gap: 20px;
+          justify-content: center;
+        }
+        .logo-title {
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: 20px;
+          .img-fluid {
+            width: 55px;
+            margin-right: 5px;
+          }
+          h1 {
+            margin: 0;
+            @include text($color-pr-3, $fs-lg + 10, $fw-bold-1);
+          }
+        }
+        .chinh-sach {
+          width: 100%;
+          .list-unstyled {
+            .list-item {
+              margin-bottom: 10px;
+              .text-style {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .lien-ket {
+          padding-bottom: 30px;
+          .d-flex {
+            .facebook,
+            .youtube {
+              height: 60px;
+              width: 60px;
+              font-size: 28px;
+            }
+          }
+        }
+        .lien-he {
+          text-align: center;
+          padding-bottom: 30px;
+          .list-unstyled {
+            text-align: center;
+            .list-item {
+              margin-bottom: 10px;
+              i {
+                font-size: 16px;
+                color: $color-pr-2;
+                span {
+                  margin-left: 10px;
+                  letter-spacing: 1px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .line-mid {
+      width: 60%;
+      height: 1px;
+
+      margin: 10px auto 20px;
+    }
+    .second-content {
+      position: relative;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      a {
+        display: inline-block;
+        width: 100px;
+      }
+      .text-right {
+        p {
+          color: white;
+          font-size: 10px;
+          margin: 0 0 5px;
+          letter-spacing: 1px;
+          word-spacing: 3px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+  }
+}

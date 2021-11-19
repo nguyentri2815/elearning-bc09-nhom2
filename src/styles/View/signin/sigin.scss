@@ -1,0 +1,92 @@
+@import "../../helpers/variables";
+.signin {
+  .wrapper {
+    background: url("https://p.w3layouts.com/demos_new/template_demo/28-07-2017/online_login_form-demo_Free/1930595034/web/images/1.jpg");
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+  }
+  .title {
+    color: $color-pr-1;
+    font-size: 3rem;
+    letter-spacing: 10px;
+    font-weight: 700;
+    width: 100%;
+    align-items: center;
+  }
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .themeInput {
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 40px;
+    height: 50px;
+    color: $color-w100;
+    padding: 0 10px;
+    margin: 20px 0;
+    transition: all 0.5s;
+    width: 100%;
+    // &::placeholder: {
+    //   color: $color-w100;
+    // }
+    &:hover {
+      border: 1px solid;
+    }
+    &::placeholder {
+      color: $color-w100;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .themeButton {
+    background: #df5a5a;
+    width: 100%;
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    border: none;
+  }
+  .errorTheme {
+    // color: #df5a5a;
+    line-height: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: $color-re-1 !important;
+  }
+  .button-footer {
+    .login__signup {
+      color: #df5a5a;
+      margin-top: 10px;
+      .signup {
+        color: $color-pr-1;
+      }
+    }
+    .login__signin {
+      span {
+        color: $color-se-3;
+      }
+      margin-top: 10px;
+      .signin {
+        color: $color-pr-1;
+      }
+    }
+  }
+  @media screen and (max-width: 1256px) {
+  }
+  @media screen and (max-width: 992px) {
+  }
+  @media screen and (max-width: 768px) {
+  }
+  @media screen and (max-width: 576px) {
+  }
+}

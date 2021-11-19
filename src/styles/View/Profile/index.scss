@@ -1,0 +1,220 @@
+* {
+  font-family: $font-text;
+  box-sizing: border-box;
+}
+.profile {
+  margin: 0 auto;
+  width: 80%;
+  padding: 100px 0;
+
+  .tabSection {
+    flex-grow: 1;
+    display: flex;
+    min-height: 800px;
+    width: 100%;
+  }
+  .tabLeft {
+    background-color: #ffffff;
+    color: #212529;
+    width: 25%;
+    border-radius: 25px;
+    text-align: left;
+    overflow: hidden;
+    .border-avatar {
+      margin-bottom: 20px;
+      min-height: 250px;
+
+      .profile-avatar {
+        width: 50%;
+
+        margin: auto;
+        padding: 20px 0;
+        img {
+          border-radius: 50%;
+          overflow: hidden;
+          width: 100%;
+          margin: auto;
+        }
+      }
+      .user-name {
+        text-align: center;
+        h3 {
+          color: $color-se-2;
+          font-size: $fs-md;
+        }
+        p {
+          text-transform: capitalize;
+          font-size: $fs-md-lg;
+        }
+      }
+    }
+  }
+  .tabRight {
+    margin-left: 3%;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    .wallpaper {
+      width: 90%;
+      margin: 0 auto;
+      .table-header {
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 20px;
+        h3 {
+          font-size: 1.75rem;
+        }
+        p {
+          margin-bottom: 0;
+        }
+        .bottom-line {
+          &::before {
+            display: inline-block;
+            vertical-align: middle;
+            height: 1px;
+            width: 40%;
+            content: "";
+            background: linear-gradient(
+              to left,
+              rgba(0, 0, 0, 0.3),
+              transparent
+            );
+          }
+          &::after {
+            display: inline-block;
+            vertical-align: middle;
+            height: 1px;
+            width: 40%;
+            content: "";
+            background: linear-gradient(
+              to right,
+              rgba(0, 0, 0, 0.3),
+              transparent
+            );
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1256px) {
+    .tabSection {
+      min-height: 700px;
+    }
+    .tabLeft {
+      width: 30%;
+      .border-avatar {
+        min-height: 200px;
+
+        .profile-avatar {
+          width: 40%;
+
+          margin: auto;
+          padding: 20px 0;
+        }
+        .user-name {
+          h3 {
+            font-size: $fs-md - 3;
+          }
+          p {
+            font-size: $fs-md-lg - 5;
+          }
+        }
+      }
+      .info-left {
+        font-size: 12px;
+      }
+    }
+    .tabRight {
+      .wallpaper {
+        .table-header {
+          h3 {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .tabSection {
+      min-height: 600px;
+    }
+    .tabLeft {
+      width: 30%;
+      .border-avatar {
+        min-height: 180px;
+
+        .profile-avatar {
+          width: 40%;
+
+          margin: auto;
+          padding: 20px 0;
+        }
+        .user-name {
+          h3 {
+            font-size: $fs-md - 5;
+          }
+          p {
+            font-size: $fs-md-lg - 7;
+          }
+        }
+      }
+
+      .info-left {
+        font-size: 10px;
+      }
+    }
+    .tabRight {
+      .wallpaper {
+        .table-header {
+          h3 {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .tabSection {
+      min-height: 550px;
+    }
+    .tabLeft {
+      width: 40%;
+      .border-avatar {
+        min-height: 180px;
+
+        .profile-avatar {
+          width: 40%;
+
+          margin: auto;
+          padding: 20px 0;
+        }
+        .user-name {
+          h3 {
+            font-size: $fs-md - 7;
+          }
+          p {
+            font-size: $fs-md-lg - 9;
+          }
+        }
+      }
+
+      .info-left {
+        font-size: 8px;
+      }
+    }
+    .tabRight {
+      .wallpaper {
+        .table-header {
+          h3 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+  }
+}

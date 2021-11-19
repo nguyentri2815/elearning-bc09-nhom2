@@ -1,0 +1,38 @@
+.slider-course {
+  box-sizing: border-box;
+  height: 450px;
+
+  width: 90%;
+  margin: auto;
+  .title {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    font-weight: $fw-bold-1;
+    font-family: $font-title;
+    font-size: $fs-lg;
+    width: fit-content;
+    text-transform: capitalize;
+  }
+  .sc-item {
+    width: 20%;
+    padding: 0 10px;
+  }
+
+  .carousel-control-prev::before,
+  .carousel-control-next::before {
+    position: absolute;
+    top: -10%;
+    border-radius: 50%;
+    // background-color: red;
+    font-size: 36px;
+    font-weight: 100;
+    color: $color-pr-3 !important;
+    transition: linear 0.5s;
+    &:hover {
+      color: $color-pr-1 !important;
+    }
+  }
+  .carousel-control-prev::before {
+    left: -20px;
+  }
+}

@@ -1,0 +1,147 @@
+.item-course-of-user {
+  padding: 10px 20px;
+  background: white;
+  margin: 20px 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.2);
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content-left {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        border: 1px solid $color-se-2;
+        width: 80px;
+        height: 80px;
+        background: center cover;
+        margin-left: 15px;
+      }
+      .mct-item-course-of-user {
+        width: 100%;
+        margin-left: 15px;
+        h5 {
+          @include text(black, $fs-md-lg - 5, $fw-bold-2);
+          font-family: $font-title;
+          letter-spacing: 1px;
+          .nav-link {
+            text-decoration: none;
+            @include text(black, $fs-md, normal);
+            margin-right: 5px;
+            padding: 3px 7px;
+            border-radius: 3px;
+            letter-spacing: 0;
+            background: $color-se-2;
+            color: white;
+            cursor: pointer;
+            &:hover {
+              background: $color-se-1;
+            }
+          }
+        }
+      }
+    }
+    .content-right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .fee {
+        margin-bottom: initial;
+
+        @include text($color-pr-1, $fs-sm, normal);
+      }
+      i {
+        font-size: $fs-md-lg;
+        color: rgba(0, 0, 0, 0.7);
+        cursor: pointer;
+        &:hover {
+          color: rgba(255, 0, 0, 0.5);
+        }
+        margin-left: 50px;
+      }
+    }
+  }
+  @media screen and (max-width: 1256px) {
+  }
+  @media screen and (max-width: 992px) {
+    padding: 5px 10px;
+    .content {
+      .content-left {
+        img {
+          width: 70px;
+          height: 70px;
+          margin: 10px 0;
+        }
+        .mct-item-course-of-user {
+          margin-left: 15px;
+          h5 {
+            @include text(black, $fs-md-lg - 7, $fw-bold-2);
+            font-family: $font-title;
+            letter-spacing: 1px;
+            .nav-link {
+              text-decoration: none;
+              @include text($color-w, 10px, normal);
+              margin-right: 5px;
+              padding: 3px 7px;
+            }
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      .content-right {
+        .fee {
+          margin-bottom: initial;
+
+          @include text($color-pr-1, $fs-sm - 4, normal);
+        }
+        i {
+          font-size: $fs-md-lg - 2;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .content {
+      .content-left {
+        img {
+          width: 50px;
+          height: 50px;
+          margin: 10px 0;
+        }
+        .mct-item-course-of-user {
+          margin-left: 10px;
+          h5 {
+            @include text(black, $fs-md-lg - 12, $fw-bold-2);
+            .nav-link {
+              text-decoration: none;
+              @include text($color-w, 8px, normal);
+              margin-right: 5px;
+              padding: 3px 7px;
+            }
+          }
+          p {
+            font-size: 8px;
+          }
+        }
+      }
+      .content-right {
+        .fee {
+          margin-bottom: initial;
+
+          @include text($color-pr-1, $fs-sm - 6, normal);
+        }
+        i {
+          font-size: $fs-md-lg - 2;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+  }
+}

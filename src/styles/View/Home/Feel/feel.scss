@@ -1,0 +1,173 @@
+.feel {
+  padding: 80px 0;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+
+  .main-content {
+    margin-top: 40px;
+    .title {
+      font-size: $fs-lg;
+      font-weight: $fw-bold;
+      &::before,
+      &::after {
+        display: inline-block;
+        vertical-align: middle;
+        height: 1px;
+        width: 30%;
+        margin-right: 15px;
+        content: "";
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent);
+      }
+      &::after {
+        margin-left: 15px;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
+      }
+    }
+    .carousel {
+      width: 90%;
+      margin: 0 auto;
+
+      .content {
+        @include text(gray, $fs-md-lg + 3, $fw-thin);
+        line-height: 32px;
+        font-style: italic;
+        margin-bottom: 27px;
+      }
+      .info {
+        font-style: italic;
+        font-family: $font-title;
+        @include text($color-pr-1, $fs-md, $fw-bold-1);
+        span {
+          color: black;
+        }
+      }
+    }
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 20%;
+    font-size: $fs-xl * 2;
+    font-weight: 100;
+    color: $color-pr-3 !important;
+    transition: linear 0.5s;
+    &:hover {
+      color: $color-pr-1 !important;
+    }
+  }
+
+  .carousel-control-next::before {
+    content: none;
+  }
+  .carousel-control-prev {
+    left: -10%;
+  }
+  .carousel-control-next {
+    right: -5%;
+  }
+
+  @media screen and (max-width: 1256px) {
+    .main-content {
+      margin-top: 40px;
+      .title {
+        font-size: $fs-lg - 2;
+        &::before,
+        &::after {
+          width: 30%;
+          margin-right: 10px;
+        }
+        &::after {
+          margin-left: 10px;
+        }
+      }
+      .carousel {
+        width: 90%;
+        margin: 0 auto;
+
+        .content {
+          font-size: $fs-md-lg - 2;
+          line-height: 30px;
+        }
+        .info {
+          font-size: $fs-md - 2;
+        }
+      }
+    }
+    .carousel-control-prev {
+      left: -13%;
+    }
+    .carousel-control-next {
+      right: -7%;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .main-content {
+      margin-top: 35px;
+      .title {
+        font-size: $fs-lg - 7;
+        &::before,
+        &::after {
+          width: 20%;
+          margin-right: 10px;
+        }
+        &::after {
+          margin-left: 10px;
+        }
+      }
+      .carousel {
+        .content {
+          font-size: $fs-md-lg - 7;
+          line-height: 25px;
+        }
+        .info {
+          font-size: $fs-md - 3;
+        }
+      }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      font-size: $fs-xl * 2 - 15;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .main-content {
+      margin-top: 30px;
+      .title {
+        font-size: $fs-lg - 10;
+      }
+      .carousel {
+        .content {
+          font-size: $fs-md-lg - 10;
+          line-height: 25px;
+        }
+        .info {
+          font-size: $fs-md - 5;
+        }
+      }
+    }
+    .carousel-control-prev {
+      left: -16%;
+    }
+    .carousel-control-next {
+      right: -10%;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .main-content {
+      margin-top: 25px;
+      .title {
+        font-size: $fs-lg - 15;
+      }
+      .carousel {
+        .content {
+          font-size: $fs-md-lg - 12;
+          line-height: 25px;
+        }
+      }
+    }
+    .carousel-control-prev,
+    .carousel-control-next {
+      font-size: $fs-xl * 1.1;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+.userProfile {
+  box-sizing: border-box;
+  .formControl {
+    .form-item {
+      display: flex;
+      margin-bottom: 30px;
+      line-height: 40px;
+      h1 {
+        font-size: 12px;
+        letter-spacing: 1px;
+        width: 15%;
+      }
+      .input {
+        width: 85%;
+      }
+    }
+    .buttonForm {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        display: inline-block;
+        margin-left: 20px;
+      }
+    }
+  }
+  @media screen and (max-width: 1256px) {
+    .formControl {
+      .form-item {
+        display: flex;
+        margin-bottom: 20px;
+        line-height: 30px;
+        h1 {
+          font-size: 10px;
+          letter-spacing: 1px;
+          width: 15%;
+        }
+        .input {
+          width: 85%;
+
+          input {
+            font-size: 10px !important;
+          }
+        }
+      }
+      .buttonForm {
+        font-size: 12px;
+        display: flex;
+        justify-content: flex-end;
+        .btnn {
+          padding: 7px 20px;
+        }
+        button {
+          display: inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .formControl {
+      .form-item {
+        margin-bottom: 20px;
+        line-height: 30px;
+        h1 {
+          font-size: 10px;
+          letter-spacing: 1px;
+          width: 25%;
+        }
+        .input {
+          width: 75%;
+
+          input {
+            font-size: 10px !important;
+          }
+        }
+      }
+      .buttonForm {
+        display: flex;
+        justify-content: flex-end;
+        .btnn {
+          font-size: 10px;
+          padding: 7px 15px;
+        }
+        button {
+          display: inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .formControl {
+      .form-item {
+        margin-bottom: 15px;
+        line-height: 30px;
+        h1 {
+          font-size: 10px;
+          letter-spacing: 1px;
+          width: 30%;
+        }
+        .input {
+          width: 70%;
+
+          input {
+            font-size: 10px !important;
+          }
+        }
+      }
+      .buttonForm {
+        .btnn {
+          font-size: 10px;
+          padding: 5px 12px;
+        }
+        button {
+          display: inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+  }
+}

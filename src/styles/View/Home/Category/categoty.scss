@@ -1,0 +1,105 @@
+.category {
+  text-align: center;
+
+  // padding: 40px 100px;
+  position: relative;
+  .wallpaper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    width: 100%;
+    text-align: center;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .title {
+    font-family: $font-title;
+    padding-top: 20px;
+    margin-bottom: 80px;
+    font-size: $fs-lg;
+    font-weight: $fw-normal;
+    &::before,
+    &::after {
+      display: inline-block;
+      vertical-align: middle;
+      height: 1px;
+      width: 30%;
+      margin-right: 15px;
+      content: "";
+      background: linear-gradient(to left, rgba(0, 0, 0, 0.3), transparent);
+    }
+    &::after {
+      margin-left: 15px;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.3), transparent);
+    }
+  }
+  .container {
+    margin: auto;
+    margin-bottom: 80px;
+
+    .item {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: no-gap;
+      column-gap: 10px;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 1256px) {
+    .container {
+      .item {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+        // justify-content: space-around;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+  }
+  @media screen and (max-width: 768px) {
+    .title {
+      padding-top: 10px;
+      font-size: $fs-md-lg-2;
+      margin-bottom: 50px;
+
+      &::before,
+      &::after {
+        width: 20%;
+        margin-right: 10px;
+      }
+      &::after {
+        margin-left: 10px;
+      }
+    }
+    .container {
+      margin: auto;
+
+      .item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+        // justify-content: space-around;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .container {
+      margin: auto;
+
+      .item {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+        row-gap: 30px;
+        // justify-content: space-around;
+      }
+    }
+  }
+}

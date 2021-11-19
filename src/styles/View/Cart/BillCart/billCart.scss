@@ -1,0 +1,228 @@
+.bill-cart {
+  p {
+    margin-bottom: 0;
+  }
+  width: 100%;
+
+  h3 {
+    @include text(rgba(0, 0, 0, 0.8), $fs-md-lg, $fw-bold-2);
+    font-family: $font-title;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .so-luong {
+    display: flex;
+    justify-content: space-between;
+    @include text(rgba(0, 0, 0, 0.8), $fs-md, $fw-bold-2);
+    margin-bottom: 10px;
+  }
+  .tam-tinh {
+    display: flex;
+    justify-content: space-between;
+    @include text(rgba(0, 0, 0, 0.8), $fs-md, $fw-bold-2);
+    .fee {
+      @include text($color-pr-2, $fs-md-lg - 5, $fw-bold-1);
+    }
+    margin-bottom: 10px;
+  }
+  .apply {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    input,
+    button {
+      margin: 0 5px;
+    }
+    input {
+      padding: 5px 10px;
+    }
+    margin-bottom: 30px;
+    &::after {
+      content: "";
+      @include absolute_bottom(-20px, 20%, 60%, 1px);
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(0, 0, 0, 0.5),
+        transparent
+      );
+    }
+  }
+  .total {
+    display: flex;
+    justify-content: space-between;
+    @include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 5, $fw-bold-2);
+    .fee {
+      @include text($color-pr-2, $fs-md-lg, $fw-bold-1);
+    }
+  }
+  .text-right {
+    @include text(rgba(0, 0, 0, 0.5), $fs-sm, normal);
+  }
+  .button-form {
+    .btn--blue {
+      width: 100%;
+      font-size: $fs-md-lg - 5;
+      margin-top: 20px;
+      font-family: $font-title;
+    }
+    .nav-link {
+      text-align: center;
+      display: inline-block;
+    }
+  }
+  @media screen and (max-width: 1256px) {
+    h3 {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 3, $fw-bold-2);
+      margin-bottom: 30px;
+    }
+    .so-luong {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md - 3, $fw-bold-2);
+    }
+    .tam-tinh {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md - 3, $fw-bold-2);
+      .fee {
+        @include text($color-pr-2, $fs-md-lg - 8, $fw-bold-1);
+      }
+    }
+    .apply {
+      input,
+      button {
+        margin: 0 5px;
+      }
+      input {
+        padding: 2px 5px;
+      }
+      margin-bottom: 30px;
+      &::after {
+        content: "";
+        @include absolute_bottom(-20px, 20%, 60%, 1px);
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(0, 0, 0, 0.5),
+          transparent
+        );
+      }
+    }
+    .total {
+      display: flex;
+      justify-content: space-between;
+      @include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 5, $fw-bold-2);
+      .fee {
+        @include text($color-pr-2, $fs-md-lg, $fw-bold-1);
+      }
+    }
+    .text-right {
+      @include text(rgba(0, 0, 0, 0.5), $fs-sm, normal);
+    }
+    .button-form {
+      .btn--blue {
+        width: 100%;
+        font-size: $fs-md-lg - 12;
+        margin-top: 20px;
+        font-family: $font-title;
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    h3 {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 7, $fw-bold-2);
+      margin-bottom: 30px;
+    }
+    .so-luong {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md - 7, $fw-bold-2);
+    }
+    .tam-tinh {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md - 7, $fw-bold-2);
+      .fee {
+        @include text($color-pr-2, $fs-md-lg - 12, $fw-bold-1);
+      }
+    }
+    .apply {
+      button {
+        padding: 5px 10px;
+        font-size: 8px;
+        margin: 0 5px;
+      }
+      input {
+        width: 80%;
+        font-size: 8px;
+        padding: 2px 5px;
+      }
+      margin-bottom: 30px;
+      &::after {
+        content: "";
+        @include absolute_bottom(-20px, 20%, 60%, 1px);
+        background: linear-gradient(
+          to right,
+          transparent,
+          rgba(0, 0, 0, 0.5),
+          transparent
+        );
+      }
+    }
+    .total {
+      display: flex;
+      justify-content: space-between;
+      @include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 5, $fw-bold-2);
+      .fee {
+        @include text($color-pr-2, $fs-md-lg - 12, $fw-bold-1);
+      }
+    }
+    .text-right {
+      @include text(rgba(0, 0, 0, 0.5), $fs-sm - 4, normal);
+    }
+    .button-form {
+      .btn--blue {
+        font-size: $fs-md-lg - 13;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    h3 {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 10, $fw-bold-2);
+      margin-bottom: 30px;
+    }
+    .so-luong {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md - 7, $fw-bold-2);
+    }
+    .tam-tinh {
+      @include text(rgba(0, 0, 0, 0.8), $fs-md - 7, $fw-bold-2);
+      .fee {
+        @include text($color-pr-2, $fs-md-lg - 12, $fw-bold-1);
+      }
+    }
+    .apply {
+      button {
+        padding: 2px 5px;
+        font-size: 5px;
+        margin: 0 5px;
+      }
+      input {
+        width: 80%;
+        font-size: 5px;
+        padding: 1px 3px;
+      }
+      margin-bottom: 15px;
+    }
+    .total {
+      display: flex;
+      justify-content: space-between;
+      @include text(rgba(0, 0, 0, 0.8), $fs-md-lg - 7, $fw-bold-2);
+      .fee {
+        @include text($color-pr-2, $fs-md-lg - 13, $fw-bold-1);
+      }
+    }
+    .text-right {
+      @include text(rgba(0, 0, 0, 0.5), $fs-sm - 4, normal);
+    }
+    .button-form {
+      .btn--blue {
+        font-size: $fs-md-lg - 15;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+  }
+}

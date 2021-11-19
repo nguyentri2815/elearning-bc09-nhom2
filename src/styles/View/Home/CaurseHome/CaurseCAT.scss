@@ -1,0 +1,125 @@
+.caurseCAT {
+  .search-content {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    .search {
+      margin: 20px 0;
+      width: 30%;
+      display: flex;
+      // justify-content: end;
+      // align-items: flex-end;
+      border-radius: none !important;
+    }
+    .input-group-append {
+      // border-radius: 10px;
+      // background-color: red;
+      padding: 9px 12px;
+      font-size: 19px;
+      line-height: 19px;
+    }
+  }
+  .setFullHeight {
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 50px;
+    // background-color: red;
+    position: relative;
+    .grid-course {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      row-gap: 20px;
+      column-gap: 20px;
+      .grid-cItem {
+        width: 100%;
+      }
+    }
+    .pagination-custom {
+      position: absolute;
+      text-align: center;
+      margin: 40px 0 20px;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  @media screen and (max-width: 1256px) {
+  }
+  @media screen and (max-width: 992px) {
+    .setFullHeight {
+      min-height: 100vh;
+      width: 100%;
+      margin-bottom: 50px;
+
+      .grid-course {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+        .grid-cItem {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .search-content {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      .search {
+        margin: 20px 0;
+        width: 40%;
+      }
+      .input-group-append {
+        padding: 7px 10px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+    }
+    .setFullHeight {
+      min-height: 100vh;
+      width: 100%;
+      margin-bottom: 50px;
+      position: relative;
+      .grid-course {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
+        .grid-cItem {
+          width: 100%;
+        }
+      }
+      .pagination-custom {
+        position: absolute;
+        text-align: center;
+        margin: 40px 0 20px;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .setFullHeight {
+      min-height: 100vh;
+      width: 100%;
+      margin-bottom: 50px;
+      position: relative;
+      .grid-course {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .pagination-custom {
+        position: absolute;
+        text-align: center;
+        margin: 40px 0 20px;
+        bottom: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}
